@@ -1,7 +1,6 @@
 
 from django.contrib import admin
-from .models import Department, Employee, Course, TrainingRecord
-
+from .models import Department, Employee, Course, TrainingRecord, Category, Product
 
 @admin.register(Department)
 class DepartmentAdmin(admin.ModelAdmin):
@@ -39,3 +38,6 @@ class TrainingRecordAdmin(admin.ModelAdmin):
         'employee__last_name',
         'course__code'
     )
+
+admin.site.register(Category)
+admin.site.register(Product)
